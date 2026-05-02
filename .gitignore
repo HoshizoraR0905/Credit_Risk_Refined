@@ -1,0 +1,17 @@
+data/raw/*dataset*.csv
+data/processed/*dataset*.csv
+
+models/*
+*.joblib
+*.pkl
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+.venv/
+.DS_Store
+
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!models/.gitkeep
