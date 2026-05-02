@@ -13,7 +13,7 @@ def main():
     y_train = train_df[TARGET]
 
     numeric_features = X_train.select_dtypes(include=["int64", "float64"]).columns.tolist()
-    categorical_features = X_train.select_dtypes(include=["object"]).columns.tolist()
+    categorical_features = X_train.drop(columns=numeric_features).columns.tolist()
 
     models = build_model_pipelines(numeric_features, categorical_features)
 
@@ -24,7 +24,7 @@ def main():
 
         model_pipeline.fit(X_train, y_train)
 
-        model_path = MODELS_DIR / f"{model_name}.joblib"
+        model_path = MODELS_DIR / "baseline" / f"{model_name}.joblib"
         joblib.dump(model_pipeline, model_path)
 
         print(f"{model_name} training completed.")

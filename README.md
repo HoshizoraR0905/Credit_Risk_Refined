@@ -1,6 +1,8 @@
 # Credit Risk Default Project
 
-This project uses applicant-level personal and historical credit information to predict loan default probability.
+This project uses applicant-level personal and historical credit information to predict loan default probability. In addition to the prediction model, the project includes two planned extensions: a decision layer that converts model output into credit approval decisions, and an LLM-based output translation layer that turns model results into readable business explanations. 
+
+This is based on my previous credit risk project, with the goal of improving the codebase toward a more production-style structure, as well as adding comparison between different models. 
 
 ## Prediction
 
