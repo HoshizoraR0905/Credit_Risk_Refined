@@ -127,3 +127,11 @@ The selected validation thresholds are then applied to the test set for final de
 - `reports/test_decision_comparison.csv`
 
 EL-based thresholds generally produce higher realized profit than the default 0.5 probability threshold, but with a lower approval rate. This highlights the tradeoff between approval volume and portfolio risk.
+
+In particular, XGBoost and Gradient Boosting produce higher realized profit than Logistic Regression and Random Forest under the simplified cost assumption. Threshold searches that use realized net cost as the objective also produce higher realized profit than the default `0.5` threshold or the F1-optimized threshold, which is expected because they are directly optimized for the decision objective.
+
+My preferred policy would be an XGBoost-based model with a threshold selected by minimizing realized net cost, possibly with an additional constraint on approval rate or default rate among approved applicants. 
+
+## LLM-based Explanation 
+
+tbd
