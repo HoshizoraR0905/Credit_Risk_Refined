@@ -15,16 +15,16 @@ from src.config import (
 def main():
     df = pd.read_csv(CLEAN_DATA_PATH)
 
-    temp_idx, test_idx = train_test_split(
+    train_idx, temp_idx = train_test_split(
         df.index,
-        test_size=TEST_SIZE,
+        test_size=VALD_SIZE + TEST_SIZE,
         random_state=RANDOM_STATE,
         stratify=df[TARGET],
     )
 
-    train_idx, vald_idx = train_test_split(
+    vald_idx, test_idx = train_test_split(
         temp_idx,
-        test_size=VALD_SIZE / (1 - TEST_SIZE),  # Adjust validation size to account for the test split
+        test_size=TEST_SIZE/(VALD_SIZE + TEST_SIZE), 
         random_state=RANDOM_STATE,
         stratify=df.loc[temp_idx, TARGET]
     )

@@ -19,16 +19,16 @@ def main():
     # random forest
     param_grid['random_forest'] = {
         "model__n_estimators": [200, 400],
-        "model__max_depth": [5, 8, 12, None],
-        "model__min_samples_leaf": [10, 20, 50],
-        "model__min_samples_split": [20, 50, 100],
+        "model__max_depth": [5, 10, None],
+        "model__min_samples_leaf": [10, 20],
+        "model__min_samples_split": [20, 50],
     }
 
     # gradient boosting
     param_grid['gradient_boosting'] = {
-        "model__n_estimators": [100, 200, 300],
-        "model__learning_rate": [0.03, 0.05, 0.1],
-        "model__max_depth": [2, 3, 4],
+        "model__n_estimators": [200, 300],
+        "model__learning_rate": [0.05, 0.1],
+        "model__max_depth": [3, 4],
         "model__min_samples_leaf": [10, 20, 50],
         "model__subsample": [0.8, 1.0],
     }
@@ -36,11 +36,11 @@ def main():
     # xgboost
     param_grid['xgboost'] = {
         "model__n_estimators": [200, 400],
-        "model__max_depth": [2, 3, 4],
-        "model__learning_rate": [0.03, 0.05, 0.1],
+        "model__max_depth": [3, 4],
+        "model__learning_rate": [0.05, 0.1],
         "model__subsample": [0.8, 1.0],
         "model__colsample_bytree": [0.8, 1.0],
-        "model__reg_lambda": [0.5, 1.0, 2.0],
+        "model__reg_lambda": [0.5, 1.0],
     }
 
     train_df, _, _ = load_train_test_split()
