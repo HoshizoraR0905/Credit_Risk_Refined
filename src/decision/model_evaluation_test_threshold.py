@@ -198,7 +198,7 @@ def main():
     )
 
     output_path = REPORTS_DIR / "test_decision_comparison.csv"
-    results_df.to_csv(output_path, index=False, float_format="%.6f")
+    results_df[display_cols].to_csv(output_path, index=False, float_format="%.6f")
 
     print("\nTest-set decision comparison:")
     print(results_df[display_cols])
