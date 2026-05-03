@@ -99,7 +99,7 @@ For the decision calculation, missing values in `loan_int_rate` are imputed usin
 For each applicant, a net expected Loss score is defined as:
 
 ```text
-EL = p_default * loan_amt - (1 - p_default) * loan_amt * loan_int_rate
+EL = p_default * loan_amnt - (1 - p_default) * loan_amnt * loan_int_rate
 ```
 
 where `p_default` is the model-predicted probability of default, `loan_amt` is the loan amount, and `loan_int_rate` is the interest rate expressed in decimal form. 
@@ -108,7 +108,7 @@ The first term represents expected default loss, assuming full loss of the loan 
 ### Realized Cost
 
 ```text
-Realized Cost = sum(FN * loan_amt) - sum(TN * loan_amt * loan_int_rate)
+Realized Cost = sum(FN * loan_amnt) - sum(TN * loan_amnt * loan_int_rate)
 ```
 
 ### Threshold Search
