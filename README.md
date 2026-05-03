@@ -88,9 +88,9 @@ The tuned models are saved locally in the `models/tuned/` folder as `.joblib` fi
 
 The decision layer converts predicted default probabilities into loan approval or rejection decisions. In this project, `1` represents predicted default/rejection, while `0` represents predicted non-default/approval.
 
-### **Decision Input Preparation**
+### Decision Input Preparation
 
-**Missing-value** handling in the sklearn model pipeline is only applied internally during model training and prediction. It does not modify the original validation or test DataFrames. Therefore, when **`loan_amnt` and `loan_int_rate`** are reused in the decision layer, their missing values need to be handled separately.
+Missing-value handling in the sklearn model pipeline is only applied internally during model training and prediction. It does not modify the original validation or test DataFrames. Therefore, when `loan_amnt` and `loan_int_rate` are reused in the decision layer, their missing values need to be handled separately.
 
 For the decision calculation, missing values in `loan_int_rate` are imputed using the median interest rate from the training set. The interest rate is then converted into decimal form before computing expected cost or realized cost.
 
