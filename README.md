@@ -142,11 +142,11 @@ The Logistic Regression curve is relatively smooth, while the tree-based models 
 
 #### Logistic
 
-![Approval Rate vs. Realized Profit - Gradient Boosting](figures/approval_realized_profit_tradeoff_logistic_regressio_tuned.png)
+![Approval Rate vs. Realized Profit - Logistic](figures/approval_realized_profit_tradeoff_logistic_regression_tuned.png)
 
 #### Random Forest
 
-![Approval Rate vs. Realized Profit - Gradient Boosting](figures/approval_realized_profit_tradeoff_random_forest_tuned.png)
+![Approval Rate vs. Realized Profit - Random Forest](figures/approval_realized_profit_tradeoff_random_forest_tuned.png)
 
 #### XGBoost
 
