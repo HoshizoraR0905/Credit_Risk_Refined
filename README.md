@@ -136,19 +136,21 @@ My preferred policy would be an XGBoost-based model with a threshold selected by
 
 ### Approval Rate vs. Realized Profit
 
-The following figures show the tradeoff between approval rate and realized profit under different probability thresholds. Each point represents one threshold. The highlighted point corresponds to the threshold with the highest realized profit on the test set.
+The following figures show the tradeoff between approval rate and realized profit under different probability thresholds. As the threshold becomes less restrictive, more loans are approved, but realized profit eventually declines because additional approved loans introduce higher default losses. 
+
+The Logistic Regression curve is relatively smooth, while the tree-based models show a more distinct turning point. This suggests that, for the tree-based models, there is a clearer range of approval rates where realized profit is maximized before risk begins to dominate. 
 
 #### Logistic
 
-![Approval Rate vs. Realized Profit - Gradient Boosting](figures/approval_realized_profit_tradeoff_logistic_regression.png)
+![Approval Rate vs. Realized Profit - Gradient Boosting](figures/approval_realized_profit_tradeoff_logistic_regressio_tuned.png)
 
 #### Random Forest
 
-![Approval Rate vs. Realized Profit - Gradient Boosting](figures/approval_realized_profit_tradeoff_random_forest.png)
+![Approval Rate vs. Realized Profit - Gradient Boosting](figures/approval_realized_profit_tradeoff_random_forest_tuned.png)
 
 #### XGBoost
 
-![Approval Rate vs. Realized Profit - XGBoost](figures/approval_realized_profit_tradeoff_xgboost.png)
+![Approval Rate vs. Realized Profit - XGBoost](figures/approval_realized_profit_tradeoff_xgboost_tuned.png)
 
 ## LLM-based Explanation 
 
