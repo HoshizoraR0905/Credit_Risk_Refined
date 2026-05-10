@@ -132,6 +132,24 @@ In particular, XGBoost and Gradient Boosting produce higher realized profit than
 
 My preferred policy would be an XGBoost-based model with a threshold selected by minimizing realized net cost, possibly with an additional constraint on approval rate or default rate among approved applicants. 
 
+## Visualizations
+
+### Approval Rate vs. Realized Profit
+
+The following figures show the tradeoff between approval rate and realized profit under different probability thresholds. Each point represents one threshold. The highlighted point corresponds to the threshold with the highest realized profit on the test set.
+
+#### Logistic
+
+![Approval Rate vs. Realized Profit - Gradient Boosting](figures/approval_realized_profit_tradeoff_logistic_regression.png)
+
+#### Random Forest
+
+![Approval Rate vs. Realized Profit - Gradient Boosting](figures/approval_realized_profit_tradeoff_random_forest.png)
+
+#### XGBoost
+
+![Approval Rate vs. Realized Profit - XGBoost](figures/approval_realized_profit_tradeoff_xgboost.png)
+
 ## LLM-based Explanation 
 
 tbd
