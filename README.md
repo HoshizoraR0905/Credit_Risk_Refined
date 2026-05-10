@@ -11,6 +11,7 @@ Credit_Risk_refined/
 ├── data/
 │   ├── raw/
 │   └── processed/
+├── figures/
 ├── models/
 │   ├── baseline/
 │   └── tuned/
@@ -19,6 +20,7 @@ Credit_Risk_refined/
 │   ├── data/
 │   ├── decision/
 │   ├── models/
+│   ├── visualization/
 │   └── config.py
 ├── README.md
 └── .gitignore
