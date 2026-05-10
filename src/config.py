@@ -10,6 +10,7 @@ PROCESSED_DATA_DIR = DATA_DIR / "processed"
 
 MODELS_DIR = PROJECT_ROOT / "models"
 REPORTS_DIR = PROJECT_ROOT / "reports"
+FIGURES_DIR = PROJECT_ROOT / "figures"
 
 RAW_DATA_PATH = RAW_DATA_DIR / "credit_risk_dataset.csv"
 CLEAN_DATA_PATH = PROCESSED_DATA_DIR / "credit_risk_dataset_cleaned.csv"
